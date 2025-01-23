@@ -20,7 +20,7 @@ const Addemployee = () => {
      
      function addEmployee() {
           // console.log(form);
-          axiosInstance.post('http://localhost:3000/addEmployee',form).then(res => {
+          axiosInstance.post('/addEmployee',form).then(res => {
                alert(res.data.message);
                navigate('/admindashboard');
           }) .catch(error => {

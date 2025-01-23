@@ -22,7 +22,7 @@ const Updateemployee = () => {
         function update() {
           // console.log(form);
           if(location.state!=null){
-               axiosInstance.put('http://localhost:3000/edit/'+location.state.val,form).then((res)=>{
+               axiosInstance.put('/edit/'+location.state.val,form).then((res)=>{
                  alert(res.data.message);
                  navigate('/admindashboard')
                })

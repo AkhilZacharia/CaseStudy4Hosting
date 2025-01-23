@@ -29,7 +29,7 @@ const Home = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axiosInstance.get('http://localhost:3000/user/home/')
+    axiosInstance.get('/user/home/')
       .then(response => {
         setData(response.data);
       })

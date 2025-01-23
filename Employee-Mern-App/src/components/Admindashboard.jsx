@@ -33,7 +33,7 @@ const Admindashboard = () => {
      const navigate=useNavigate();
 
      function load() {
-      axiosInstance.get('http://localhost:3000/').then(response => {
+      axiosInstance.get('/').then(response => {
         setData(response.data);
       })
       .catch(error => {
@@ -48,7 +48,7 @@ const Admindashboard = () => {
   
 
   function updateEmployee(val) {
-    const url = `http://localhost:3000/find/${val}`
+    const url = `/find/${val}`
     // console.log(val);
     axiosInstance.get(url).then(res => {
       // alert(res.data.message);
@@ -60,7 +60,7 @@ const Admindashboard = () => {
    })
   }
   function deleteEmployee(val) {
-    axiosInstance.delete(`http://localhost:3000/delete/${val}`).then(res => {
+    axiosInstance.delete(`/delete/${val}`).then(res => {
       load();
       navigate('/admindashboard/');
       alert(res.data.message);
