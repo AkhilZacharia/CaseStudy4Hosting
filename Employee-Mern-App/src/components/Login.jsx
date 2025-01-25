@@ -41,7 +41,7 @@ const Login = () => {
 
   function loginValue(){
     // console.log(form);
-    axios.post('/login/',form).then((res)=>{
+    axios.post('/login',form).then((res)=>{
      alert(res.data.message);
      if(res.data.key){
        sessionStorage.setItem('logintoken',res.data.key); 

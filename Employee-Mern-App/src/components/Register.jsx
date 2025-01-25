@@ -61,7 +61,7 @@ const Register = () => {
 
   function registerValue(){
     console.log(form);
-    axios.post('/api/login/add/',form).then((res)=>{
+    axios.post('/api/login/add',form).then((res)=>{
      alert(res.data.message);
        navigate('/');
     }).catch((error)=>{
